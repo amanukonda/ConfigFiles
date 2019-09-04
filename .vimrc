@@ -1,3 +1,5 @@
+"Clone Vundle repo using "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim" for this configuration to take affect 
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
