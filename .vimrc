@@ -6,6 +6,11 @@ filetype off                  " required
 
 " Vim Configuration
 syntax on
+set hlsearch          " Search highlighting
+set ignorecase        " Ignore case
+set smartcase         " Do not ignore case if an uppercase character is used in search word
+set incsearch         " Incremental search
+set nowrapscan        " Do not search from start if end of document is reached
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -20,7 +25,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'valloric/youcompleteme'
 
 " Syntax Check Plugin
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
 
 " Tree Explorer Plugin
 Plugin 'scrooloose/nerdtree'
@@ -35,14 +40,20 @@ Plugin 'jiangmiao/auto-pairs'
 " Ansible YAML Syntax Highlighting Plugin
 Plugin 'pearofducks/ansible-vim'
 
-" Search Plugin
-Plugin 'haya14busa/incsearch.vim'
-
 " Python Linter, PEP8 Plugin. Requires installation of flake8 using pip.
 Plugin 'nvie/vim-flake8'
 
 " Git Plugin
 Plugin 'airblade/vim-gitgutter'
+
+" Surround
+Plugin 'tpope/vim-surround'
+
+" Git Plugin
+Plugin 'tpope/vim-fugitive' 
+
+" Icons Plugin
+" Plugin 'ryanoasis/vim-devicons'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -93,13 +104,18 @@ au BufRead,BufNewFile *.{yml,yaml} set filetype=yaml.ansible
 "let g:ansible_extra_keywords_highlight = 1
 "let g:ansible_template_syntaxes = { '*.rb.j2': 'ruby' }
 
-""""""""Vim Gitgutter Settings""""""""
+""""""""Vim Gitgutter Configuration""""""""
 set updatetime=100
 highlight clear SignColumn
 highlight GitGutterAdd ctermfg=green
 highlight GitGutterChange ctermfg=yellow
 highlight GitGutterDelete ctermfg=red
 highlight GitGutterChangeDelete ctermfg=yellow
+
+""""""""vim-flake8 Configuration""""""""""
+let g:flake8_show_in_gutter=1
+let g:flake8_show_in_file=1
+
 
 " Brief help
 " :PluginList       - lists configured plugins
