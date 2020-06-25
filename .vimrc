@@ -11,6 +11,8 @@ set ignorecase        " Ignore case
 set smartcase         " Do not ignore case if an uppercase character is used in search word
 set incsearch         " Incremental search
 set nowrapscan        " Do not search from start if end of document is reached
+set number            " Line Numbering 
+" set relativenumber    " Enable relative numbering
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -24,12 +26,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Code Completing Plugin
 Plugin 'valloric/youcompleteme'
 
-" Syntax Check Plugin
-" Plugin 'vim-syntastic/syntastic'
-
 " Tree Explorer Plugin
 Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+" Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " Indent Lines Plugin
 Plugin 'Yggdroot/indentLine'
@@ -51,9 +50,6 @@ Plugin 'tpope/vim-surround'
 
 " Git Plugin
 Plugin 'tpope/vim-fugitive' 
-
-" Icons Plugin
-" Plugin 'ryanoasis/vim-devicons'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
