@@ -1,0 +1,7 @@
+# Ignore all files
+/*
+
+# Track the following files
+!.tmux.conf
+!.vimrc
+!.gitignore
